@@ -1,0 +1,43 @@
+B45 Labs – Proprietary License
+
+Effective date: 2026-01-01
+Last updated:   2026-05-18
+Applies to:     B45 Labs Revit Add-in v2.0.0 (Revit 2023, 2024, 2025, 2026, 2027)
+
+Copyright (c) 2026 B45 Labs.
+All rights reserved.
+
+This software and its accompanying documentation, source code, binaries,
+design, architecture, algorithms, user-interface flows, telemetry pipeline,
+branding, and assets (collectively, the "Software") are proprietary to
+B45 Labs and are protected by copyright, trade secret, and other applicable
+intellectual property laws.
+
+Unauthorized reproduction, copying, duplication, modification, adaptation,
+translation, distribution, sublicensing, public display, reverse engineering,
+decompilation, disassembly, deobfuscation, surveillance, profiling, or any
+other use of the Software is strictly prohibited, except as explicitly
+permitted under the B45 Labs Terms of Use / EULA (TERMS.md).
+
+The user assumes full responsibility for independently reviewing and
+validating every output of the Software before using it for any project
+deliverable, coordination action, fabrication order, construction activity,
+or contractual submission. B45 Labs is NOT responsible for losses, damages,
+defects, rework, delays, cost overruns, personal injury, property damage,
+or any other consequence arising on the construction site or at any other
+downstream stage of a project that may be related, directly or indirectly,
+to the use of, reliance on, or absence of independent verification of any
+Software output. See TERMS.md Section 8.1 for the full disclaimer.
+
+Any violation of these restrictions constitutes a material breach of the
+EULA and an infringement of B45 Labs' intellectual property rights, and
+will be pursued before the competent civil and criminal authorities to the
+maximum extent permitted by applicable law.
+
+See:
+- TERMS.md             (Terms of Use / EULA — binding agreement)
+- LICENSE_PROPRIETARY.md (extended proprietary notice)
+- PRIVACY.md           (Privacy Policy)
+- THIRD_PARTY_NOTICES.md (third-party components)
+
+For licensing inquiries, contact: support@B45Labs.com
