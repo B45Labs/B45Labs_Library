@@ -4,6 +4,47 @@ All notable changes to B45 Labs | Library are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/) and
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.2] – 2026-07-12
+
+> Apple-style toasts and a faster, smarter Content Browser scan.
+
+### Added
+- **Apple-style notifications** — routine messages now appear as clean, non-blocking toasts in the
+  corner of Revit, matching Coordination's new toast system.
+- **Faster Content Browser scan** — an in-memory scan cache with document-change invalidation, so
+  re-scanning within a session reuses prior results instead of re-reading unchanged models.
+
+### Changed
+- **Detail Sync** — fixed the selection count that blocked "Sync Selected," and added a "Needs
+  adoption" state that closes a silent-overwrite path, a foreground/background scan mode, and correct
+  selection theming.
+- **Family Manager · Remove Host** — reliable host removal (including already-unhosted families),
+  category-swap support (Generic Model / Casework), pick-from-canvas selection, and grid horizontal
+  scroll.
+- **Content Browser** — honest Refresh (only prompts when it will open external files; no false "run
+  in background"), a wider Type column, and an auto-hidden redundant Category column.
+- **Library ribbon** — a Visible Modules dropdown matching Coordination, with a two-line caption.
+
+### Platform
+- Full support: Revit 2023, 2024, 2025, 2026, and 2027.
+
+## [1.0.1] – 2026-07-10
+
+> A hotfix release polishing the initial Library launch.
+
+### Changed
+- **Content Browser** — a new "used elements only" filter, and faster cache-first startup: loads from
+  cache and hydrates when the pane opens, with no network wait.
+- **Family Manager** — "Adjust selection" and "Replace" now act on the checked rows, plus Remove Host,
+  category scoping, and tri-state fixes.
+- **Settings** — embedded Change Theme / Canvas / Language button icons; About wiring fix.
+
+### Fixed
+- More reliable theme and language sync; survives a stale co-installed shared component.
+
+### Platform
+- Full support: Revit 2023, 2024, 2025, 2026, and 2027.
+
 ## [1.0.0] – 2026-07-08
 
 > **Introducing B45 Labs · Library** — a content and family powerhouse that lives inside Revit.
