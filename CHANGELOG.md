@@ -4,6 +4,21 @@ All notable changes to B45 Labs | Library are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/) and
 [Semantic Versioning](https://semver.org/).
 
+## [1.0.3] – 2026-07-20
+
+> A refined interface, sharper Content Browser thumbnails, and a more reliable Family Manager.
+
+### Changed
+- **Interface refresh** — cleaner, more consistent buttons and dialogs across the whole Library,
+  tuned for both dark and light themes (shared B45 design system).
+- **About Me** — Contact is now the primary action.
+
+### Fixed
+- **Content Browser** — thumbnails size correctly on every tab, with no clipping at larger sizes.
+- **Family Manager** — reliability fixes, with reworked Unlock Parameters and Remove Host
+  (unhost family) logic.
+- **Light theme** — button-border and text legibility fixes carried from the shared design system.
+
 ## [1.0.2] – 2026-07-12
 
 > Apple-style toasts and a faster, smarter Content Browser scan.
