@@ -4,6 +4,36 @@ All notable changes to B45 Labs | Library are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/) and
 [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] – 2026-08-08
+
+> Repairs 1.1.0: Excel export could fail on Revit 2023 and 2024 with a missing-assembly error,
+> the Light theme showed dark-theme colours on status text, and families outside the curated
+> category list showed as "Uncategorized".
+
+### Fixed
+
+- **Excel export could fail on Revit 2023 and 2024.** The App Store security pins moved bundled
+  Microsoft libraries to newer versions, and .NET Framework does not roll forward across a
+  version change: the first Excel export could ask for an older library identity and be refused.
+  The add-in now supplies the matching copy itself, for every library in the payload whose
+  requested version differs from the one shipped beside it — the same repair Coordination v2.1.1
+  applies to its PDF path. Revit 2025 and newer were never affected.
+- **Status and state colours now come from the theme palette**, so Revit's Light theme no longer
+  shows dark-theme colours that were unreadable on a light background.
+- **Families outside the curated category list no longer show as "Uncategorized".** The Library tab
+  now displays the category read from the family file itself and falls back to the curated grouping
+  only when the file does not carry one. Sorting follows the name on screen.
+
+### Improved
+
+- When a family file cannot be read for its thumbnail, the message now names the exact file
+  instead of a generic error.
+
+### Platform
+- Full support: Revit 2023, 2024, 2025, 2026, and 2027.
+
+---
+
 ## [1.1.0] – 2026-08-02
 
 > Showrooms scoped to their Revit version, categories that come from the family instead of the
