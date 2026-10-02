@@ -4,6 +4,105 @@ All notable changes to B45 Labs | Library are documented here.
 This project adheres to [Keep a Changelog](https://keepachangelog.com/) and
 [Semantic Versioning](https://semver.org/).
 
+## [1.2.0] – 2026-10-01
+
+> A search that reads the drawing and speaks two languages, Compare Detail, a Schedules tab, a
+> real preview for details, sheets and families in 3D, Remove Host and Unlock Parameters on
+> family files, and Tips & Tricks.
+
+### Added
+
+- The search reads the drawing, not just its name. Type "CMU" and you get the detail whose note
+  says 8" CMU BLOCK. Every detail is indexed by the text written inside it, the detail components
+  it places, the sheet it sits on and the categories it contains, and each result says why it
+  appeared.
+- One search box, all results, grouped. A Results pill lists every match in the section you are
+  in, Models or Library, grouped by tab and with thumbnails. Click a row to select it, right-click
+  to preview it or jump to its tab, and fold away any group you do not need.
+- The search forgives punctuation and typing: "cmu" finds C.M.U., "a501" finds A-501, quotes
+  search for a phrase, one wrong letter is forgiven with the results marked as approximate, and
+  an "ab" button requires whole words.
+- The detail search speaks both languages and puts the best match first. Type "parede" and you
+  get the details annotated WALL; type "wall" and you get the ones annotated PAREDE. It knows the
+  common drawing vocabulary in English and Portuguese and says when it used it ("Synonym: wall"),
+  and quotes search for exactly what you typed. Accents no longer matter, and results are ordered
+  by relevance: a detail named for what you typed comes before one that only mentions it in a
+  note. No AI and no internet involved.
+- Compare Detail: compare the details used in the open project with the approved, published
+  details in the Library and see exactly what differs, in Revit's own drawing. Three views (side
+  by side, overlaid and a swipe), a Highlight button that colours the differences, a legend whose
+  checkboxes work as layers, Previous and Next to step through the list, and a Sync detail
+  button that brings the approved version into your project without leaving the comparison.
+- Schedules tab: a new tab on both the Models and Library sides lists schedules, key schedules,
+  material takeoffs, sheet lists, view lists and note blocks with their category and field count.
+  Insert copies the schedule into your project, renames it on a name clash and reports any column
+  that could not come across, and Preview shows the whole table as text you can select and copy.
+- A real preview for details, legends and sheets. Right-click and choose Preview: it opens in its
+  own window, large enough to read the notes, with zoom, pan, Fit and 100%.
+- Families get the large preview too, and it turns in 3D. Right-click a family and choose Preview
+  to see it far larger than the grid thumbnail, then press 3D to orbit it: middle-drag turns the
+  family, left-drag pans and the wheel zooms. Families that never had a thumbnail (profiles,
+  detail items, title blocks, annotations) now get a real preview. The preview opens in the
+  standard isometric view, and the 3D button appears only where a family can actually be
+  orbited.
+- Family Manager · Remove Host works on family files on disk. Add .rfa files or a whole folder,
+  then save a copy next to each original, copies in a folder you pick, or over the originals.
+  Every file is checked after conversion.
+- Family Manager · Unlock Parameters works on family files too, with the same three ways to save,
+  and can load the unlocked families into the open model.
+- Family Manager · Unlock Parameters can delete family parameters. Select them and press Delete:
+  the rows turn red, the removal runs in the same Apply as the unlock after a confirmation, and a
+  parameter Revit will not let go (built-in, used by a formula or by a dimension label) is
+  refused with the reason.
+- Tips & Tricks: a new first button in the Help panel with short videos, articles, product news
+  and the whole B45 Labs suite, updated from b45labs.com.
+
+### Improved
+
+- My Profile: User Profile has a friendlier name, a new switch decides whether B45 Labs mentions
+  its other products, and the export accent colour gains a swatch and a Pick button that opens
+  the Windows colour picker.
+- The Library settings window opens at once. It used to freeze for up to seventeen seconds when a
+  library path sat on a sleeping network or external drive.
+- Check Details and Sync Details open immediately and show their progress in three phases,
+  instead of appearing only after the whole library had been read. Right-click a row and choose
+  Open view to jump to that view in Revit.
+- One look for every notification, anchored to the Revit window instead of the corner of the
+  screen.
+- Refreshing a library that is already read shows its progress and a completion notice, however
+  quick it is, so you can tell the click worked.
+- The Library follows Revit's theme by default, and its dark tones match the Revit panels it
+  docks beside.
+- Everything added in this release was reviewed in Portuguese, Spanish, French and Russian, and
+  thirteen strings that had stayed in English are translated.
+
+### Fixed
+
+- The Library stopped re-reading itself. Browsing a library re-opened every library file and
+  re-drew every preview on each refresh; on a network drive that was around twenty minutes of
+  frozen Revit. A library is now read once and served from its saved copy.
+- Inserting a detail no longer re-reads the whole library afterwards, and no longer opens the
+  library model in front of you.
+- Categories are named the way Revit names them. Tag categories no longer disappear into a single
+  Annotation row, and the grid column and the dropdown always agree.
+- The side rail keeps the tab you had open.
+- The first-scan warning no longer appears in every session when a library file sits on a drive
+  that is unplugged, and the content of that file stays listed from its last scan.
+- The note at the bottom of the Library settings window is readable in the light theme.
+- Maximized windows spilled past the work area, and the maximize button went blank in Check
+  Details and Unlock Family Parameters.
+- The highlighted item in the Family Manager's dropdowns and right-click menu showed dark text on
+  the blue selection in the light theme.
+- Preview images were left behind in the temp folder after every session.
+- The About window's copyright line named a company that does not exist.
+
+### Platform
+- The first Library refresh after updating reads each library file once more, because the search
+  index changed.
+- Full support: Revit 2023, 2024, 2025, 2026 and 2027.
+
+---
+
 ## [1.1.1] – 2026-08-08
 
 > Repairs 1.1.0: Excel export could fail on Revit 2023 and 2024 with a missing-assembly error,
